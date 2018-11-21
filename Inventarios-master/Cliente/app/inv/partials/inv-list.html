@@ -1,0 +1,84 @@
+<div class="panel panel-default">
+    <div class="panel-body">
+        <div class="row">
+            <form role="form" ng-submit="searchInv(filters)" novalidate="novalidate">
+                <!--<div class="row">-->
+                <div class="form-group col-sm-offset-1 col-sm-4 col-md-offset-1 col-md-4 col-lg-offset-1 col-lg-4">
+                    <div class="row">
+                        <label class="sr-only" for="Codigo">Código</label>
+                        <div>
+                            <input class="form-control" id="Codigo" name="Codigo" type="text" placeholder="Código" tabindex="1" ng-model="filters.articulo" disable-valid-styling="true" disable-invalid-styling="true"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-sm-offset-1 col-sm-4 col-md-offset-1 col-md-4 col-lg-offset-1 col-lg-4">
+                    <div class="row">
+                        <label class="sr-only" for="Descripcion">Descripción</label>
+                        <div>
+                            <input class="form-control" id="Descripcion" name="Descripcion" type="text" placeholder="Descripción" tabindex="2" ng-model="filters.descripcion" disable-valid-styling="true" disable-invalid-styling="true"/>
+                        </div>
+                    </div>
+                </div>
+            <!--</div>
+            <div class="row">-->
+                <div class="form-group col-sm-offset-1 col-sm-4 col-md-offset-1 col-md-4 col-lg-offset-1 col-lg-4">
+                    <div class="row">
+                        <label class="sr-only" for="Fabricante">Fabricante</label>
+                        <div>
+                            <input class="form-control" id="Fabricante" name="Fabricante" type="text" placeholder="Fabricante" tabindex="3" ng-model="filters.fabricante" disable-valid-styling="true" disable-invalid-styling="true"/>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group col-sm-offset-1 col-sm-4 col-md-offset-1 col-md-4 col-lg-offset-1 col-lg-4">
+                    <div class="row">
+                        <label class="sr-only" for="Grupo">Grupo</label>
+                        <div>
+                            <input class="form-control" id="Grupo" name="Grupo" type="text" placeholder="Grupo" tabindex="4" ng-model="filters.grupo" disable-valid-styling="true" disable-invalid-styling="true"/>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group col-sm-offset-1 col-sm-4 col-md-offset-1 col-md-4 col-lg-offset-1 col-lg-4">
+                    <div class="row">
+                        <label class="sr-only" for="Familia">Familia</label>
+                        <div>
+                            <input class="form-control" id="Familia" name="Familia" type="text" placeholder="Familia" tabindex="5" ng-model="filters.familia" disable-valid-styling="true" disable-invalid-styling="true"/>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group col-sm-offset-1 col-sm-4 col-md-offset-1 col-md-4 col-lg-offset-1 col-lg-4">
+                    <div class="row">
+                        <label class="sr-only" for="Linea">Linea</label>
+                        <div>
+                            <input class="form-control" id="Linea" name="Linea" type="text" placeholder="Linea" tabindex="6" ng-model="filters.linea" disable-valid-styling="true" disable-invalid-styling="true"/>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group col-sm-offset-1 col-sm-4 col-md-offset-1 col-md-4 col-lg-offset-1 col-lg-4">
+                    <div class="row">
+                        <label class="sr-only" for="Empresa">Empresa</label>
+                        <div>
+                            <select class="form-control" id="Empresa" name="Empresa" required="true" tabindex="7" ng-model="filters.empresa">
+                              <option value="" selected="true" hidden="true">Empresa</option>
+                              <option value="{{company.Empresa}}" ng-repeat="company in companies">{{company.Empresa}}</option>
+                            </select>
+                        </div>
+                    </div>          
+                </div>
+                <!--</div>-->
+                <div class="row">
+                    <div class="col-xs-offset-2 col-xs-8 col-sm-offset-1 col-sm-4">
+                        <button type="submit" class="btn btn-primary btn-block" ladda="isSearching" tabindex="8">Buscar</button>
+                    </div>
+                </div>      
+            </form>
+        </div>
+    </div>
+</div>
+<br />
+
+<table id="inv-table" bs-table-control="bsTableControl"></table>
+

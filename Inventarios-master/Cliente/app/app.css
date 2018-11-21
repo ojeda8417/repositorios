@@ -1,0 +1,22 @@
+/* app css stylesheet */
+/* Input con texto en mayusculas siempre */
+.txt-uppercase {
+	text-transform: uppercase;
+}
+
+.txt-uppercase::-webkit-input-placeholder
+{
+	text-transform: none;
+}
+.txt-uppercase::-moz-placeholder
+{
+	text-transform: none;
+}
+.txt-uppercase:-moz-placeholder
+{
+	text-transform: none;
+}
+.txt-uppercase:-ms-input-placeholder
+{
+	text-transform: none;
+}

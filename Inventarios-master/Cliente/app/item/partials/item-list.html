@@ -1,0 +1,41 @@
+<div class="row">
+	<div class="col-sm-offset-0 col-sm-12">
+		<div class="panel panel-default">
+			<div class="panel-body">
+				<div class="row">
+					<div class="col-sm-offset-11 col-sm-1">
+						<a href="#item/new" class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div class="panel panel-default">
+			<div class="panel-body">
+				<div class="row">
+					<div class="col-sm-offset-0 col-sm-12">
+						<table class="table">
+							<tr>
+								<th>Código</th>
+								<th>Descripción</th>
+								<th>Precio</th>
+								<th>Existencia</th>
+								<th> </th>
+							</tr>
+							<tr ng-repeat="item in items">
+								<td>{{item.code}}</td>
+								<td>{{item.description}}</td>
+								<td>{{item.price | currency}}</td>
+								<td>{{item.inventory | number}}</td>
+								<td><a href="#/item/{{item.code}}/edit" class="btn btn-danger btn-xs"><span class="glyphicon glyphicon-pencil"</span></a></td>
+							</tr>
+						</table>
+						<div ui-i18n="{{lang}}">
+							<div ui-grid="{ data: items }" class="myGrid"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

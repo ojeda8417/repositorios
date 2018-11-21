@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="InvApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="InvApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="InvApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="InvApp" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>CORAH - Inventarios</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="common/img/cart.ico" />
+ <!--  <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/normalize.css"> -->
+  
+ <!--<link rel="stylesheet" href="bower_components/angular-ui-grid/ui-grid.min.css">
+ 
+   <link rel="stylesheet" href="bower_components/html5-boilerplate/dist/css/main.css"> -->
+  <link rel="stylesheet" href="app.css">
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="lib/bootstrap-table.css">
+  <link rel="stylesheet" href="bower_components/ladda/dist/ladda-themeless.min.css">
+  <script src="bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+</head>
+<body>
+
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>                        
+        </button>
+        <a class="navbar-brand" href="#">CORAH</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="#">Inventarios</a></li>
+          <!--li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Page 1 <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">Page 1-1</a></li>
+              <li><a href="#">Page 1-2</a></li>
+              <li><a href="#">Page 1-3</a></li>
+            </ul>
+          </li-->
+          <!-- <li><a href="#">Page 2</a></li>
+          <li><a href="#">Page 3</a></li> -->
+        </ul>
+        <ul class="nav navbar-nav navbar-right" ng-controller="InvAppController"> 
+          <li ng-if="isLogged"><a href="#" ng-click="logout($event)"><span class="glyphicon glyphicon-log-in"></span> Cerrar Sesión</a></li>
+        </ul>
+      <!--   <ul class="nav navbar-nav navbar-right">
+          <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+          <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+        </ul> -->
+      </div>
+    </div>
+  </nav>
+
+  <div class="container-fluid">
+    <!--[if lt IE 7]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+  <div ng-view></div>
+    
+  </div>
+
+  <!-- In production use:
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+  -->
+
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+  <script src="bower_components/angular/angular.js"></script>
+  <script src="bower_components/angular-route/angular-route.min.js"></script>
+  <script src="bower_components/angular-jwt/dist/angular-jwt.min.js"></script>
+  <script src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+  
+  <script src="bower_components/bootstrap-table/dist/bootstrap-table.js"></script>
+  <script src="bower_components/bootstrap-table/dist/extensions/angular/bootstrap-table-angular.js"></script>
+  <script src="bower_components/bootstrap-table/dist/extensions/filter-control/bootstrap-table-filter-control.min.js"></script>
+  <script src="bower_components/bootstrap-table/dist/locale/bootstrap-table-es-MX.min.js"></script>
+  <script src="bower_components/angular-auto-validate/dist/jcs-auto-validate.min.js"></script>
+  <script src="bower_components/ladda/dist/spin.min.js"></script>
+  <script src="bower_components/ladda/dist/ladda.min.js"></script>
+  <script src="bower_components/angular-ladda/dist/angular-ladda.min.js"></script>
+
+  <script src="bs-table/BsTableHelper.js"></script>
+  <script src="common/modals/NotificationModal.js"></script>
+  <script src="auth/AuthController.js"></script>
+  <script src="auth/AuthModel.js"></script>
+  <script src="auth/AuthInterceptor.js"></script>
+  <script src="inv/InvController.js"></script>
+  <script src="inv/InvModel.js"></script>
+  <script src="item/ItemController.js"></script>
+  <script src="item/ItemModel.js"></script>
+  <script src="user/UserModel.js"></script>
+
+  <script src="app.js"></script>
+  <script src="config.js"></script>
+</body>
+</html>

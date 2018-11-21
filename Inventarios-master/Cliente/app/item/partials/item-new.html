@@ -1,0 +1,61 @@
+<div class="row">
+	<div class="col-sm-offset-2 col-sm-8">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				Nuevo artículo
+			</div>
+			<div class="panel-body">
+				<form role="form">
+					<div class="form-group">
+						<div class="row">
+							<label class="sr-only" for="code">Código</label>
+							<div class="col-sm-offset-2 col-sm-8">
+								<input class="form-control" id="code" name="code" type="text" placeholder="Código" tabindex="1" required="true" ng-model="newItem.code" />
+							</div>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<div class="row">
+							<label class="sr-only" for="description">Descripción</label>
+							<div class="col-sm-offset-2 col-sm-8">
+								<input class="form-control" id="description" name="description" type="text" placeholder="Descripción" tabindex="2" required="true" ng-model="newItem.description" />
+							</div>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<div class="row">
+							<label class="sr-only" for="price">Precio</label>
+							<div class="col-sm-offset-2 col-sm-8">
+								<input class="form-control" id="price" name="price" type="text" placeholder="Precio" tabindex="3" required="true" ng-model="newItem.price" />
+							</div>
+						</div>
+					</div>
+
+					<div class="form-group">
+						<div class="row">
+							<label class="sr-only" for="inventory">Existencia</label>
+							<div class="col-sm-offset-2 col-sm-8">
+								<input class="form-control" id="inventory" name="inventory" type="text" placeholder="Existencia" tabindex="4" required="true" ng-model="newItem.inventory" />
+							</div>
+						</div>
+					</div>
+
+					<div class="row" ng-if="!isEdit">
+						<div class="col-xs-offset-2 col-xs-8 col-sm-offset-4 col-sm-4">
+							<button type="submit" class="btn btn-primary btn-block" tabindex="5" ng-click="addItem(newItem)">Agregar</button>
+						</div>
+					</div>
+
+					<div class="row" ng-if="isEdit">
+						<div class="col-xs-offset-2 col-xs-8 col-sm-offset-4 col-sm-4">
+							<button type="submit" class="btn btn-primary btn-block" tabindex="5" ng-click="updateItem(newItem)">Guardar</button>
+						</div>
+					</div>
+					
+				</form>
+			</div>
+		</div>
+	</div>
+</div>

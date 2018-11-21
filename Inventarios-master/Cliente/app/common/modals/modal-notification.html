@@ -1,0 +1,19 @@
+<div class="modal-header" >
+    <h4 class="modal-title">
+        <!--<span class="glyphicon glyphicon-exclamation-sign" ng-class="states" aria-hidden="true" ng-show="notification.error"></span>
+        <span class="glyphicon glyphicon-info-sign" aria-hidden="true" ng-show="notification.info"></span>
+        <span class="glyphicon glyphicon-ok-sign" aria-hidden="true" ng-show="notification.success"></span>-->
+        <img width="25px" src="common/img/Error.png" ng-show="notification.error">
+        <img width="25px" src="common/img/Information.png" ng-show="notification.info">
+        <img width="25px" src="common/img/Approve.svg" ng-show="notification.success">
+        {{notification.title}}
+    </h4>
+</div>
+<div class="modal-body" ng-class="states">
+    {{notification.message}}
+</div>
+<div class="modal-footer">
+    <form role="form" novalidate="novalidate" ng-submit="ok()">
+        <button class="btn btn-primary" type="submit" tabindex="1" autofocus="true">OK</button>
+    </form>
+</div>

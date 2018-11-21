@@ -1,0 +1,33 @@
+<div class="row">
+	<div class="col-sm-offset-3 col-sm-6 col-lg-4 col-lg-offset-4">
+		<div class="panel panel-default">
+			<div class="panel-heading">
+				Inicio de Sesión 
+			</div>
+			<div class="panel-body">
+				<form role="form" class="form-Vertical" novalidate="novalidate" ng-submit="authenticate(newAuth)">
+					<div class="form-group col-sm-offset-2 col-sm-8">
+						<div class="row">
+							<label class="sr-only" for="user">Usuario</label>
+							<input class="form-control txt-uppercase" id="user" name="user" type="text" placeholder="Usuario" tabindex="1" required="true" ng-model="newAuth.user" />
+						</div>
+					</div>
+
+					<div class="form-group col-sm-offset-2 col-sm-8">
+						<div class="row">
+							<label class="sr-only" for="password">Contraseña</label>
+							<input class="form-control" id="password" name="password" type="password" placeholder="Contraseña" tabindex="2" required="true" ng-model="newAuth.password" />
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="col-xs-offset-2 col-xs-8 col-sm-offset-4 col-sm-4">
+							<button type="submit" class="btn btn-primary btn-block" ladda="isLoggin" tabindex="5">Iniciar sesión</button>
+						</div>
+					</div>
+					
+				</form>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,26 @@
+[
+	{
+		"code":"001",
+		"description":"Mouse Razer R2500",
+		"price":1999.99,
+		"inventory":3
+	},
+	{
+		"code":"002",
+		"description":"Mouse Microsoft M500",
+		"price":149,
+		"inventory":100000000
+	},
+	{
+		"code":"003",
+		"description":"Motherboard Gigabyte UDH-E3 LGA-1500",
+		"price":2650.20,
+		"inventory":25
+	},
+	{
+		"code":"004",
+		"description":"Laptop HP Pavillion Gaming ak0001la",
+		"price":18999,
+		"inventory":1.52341
+	}
+]
