@@ -1,0 +1,113 @@
+  	     <div class="row">
+        <div class="span12">
+          <div class="widget widget-table action-table">
+            <div class="widget-header"> <i class="icon-th-list"></i>
+              <h3>LISTA DE ESPERA</h3>
+            </div>
+            <!-- /widget-header -->
+            <div class="widget-content">
+              <table class="table table-bordered" id="myTable">
+                <thead>
+                  <tr>
+                    <th>Nombre del Alumno</th>
+                    <th># Ficha</th>
+                    <th>Turno</th>
+                    <th>Estado</th>
+                    <th class="td-actions">Opciones</th>
+                  </tr>
+                </thead>
+                <tbody id="tableEspera">
+                 
+                </tbody>
+              </table>
+            </div>
+            <!-- /widget-content --> 
+          </div>
+        </div>
+        <!-- /span6 --> 
+      </div>
+      <!-- /row -->
+<link rel="stylesheet" type="text/css" href="css/datatables.min.css"/>
+<script type="text/javascript" src="js/datatables.min.js"></script>
+
+
+<script>
+  $(document).ready(function (){
+    request();
+  });
+
+    function request(){
+       $.get("php/lista_espera.php", function( data ) {
+            var jsonResponse  = jQuery.parseJSON(data);
+            var tablaDatos= $("#tableEspera");
+                tablaDatos.empty();
+            $.each(jsonResponse, function(i,item){
+                     var color=getClass(item.Estado, item.Ficha);
+                     var datos =" <tr class='"+color.color+"'>"+
+                                        "<td>"+item.Nombre+"</td>"+
+                                        "<td>"+item.Ficha+"</td>"+
+                                        "<td>"+item.Turno+"</td>"+
+                                        "<td>"+getEstado(item.Estado)+"</td>";
+                     
+
+                     datos += color.botones;
+                     tablaDatos.append(datos);
+              });
+
+             $('#myTable').DataTable({
+                  "order":false                  
+                } );
+        });
+    }
+
+    function getEstado(estado) {
+        switch(parseInt(estado)) {
+          case 1:
+              return 'En espera'
+              break;
+          case 2:
+              return 'Atendido'
+              break;
+          case 3:
+              return 'No se presentó'
+              break;
+        }
+    }
+
+function noPresent(ficha) {
+      var parameters = { Ficha:ficha, Estado:3};
+      $.get("php/updateStatus.php", parameters ).done(function( data ) {
+              var jsonResponse  = jQuery.parseJSON(data);
+              request();
+      });
+    }
+
+    function attended(ficha) {
+      var parameters = { Ficha:ficha, Estado:2};
+      $.get("php/updateStatus.php", parameters ).done(function( data ) {
+              var jsonResponse  = jQuery.parseJSON(data);
+              request();
+      });
+    }
+    function getClass(estado,Ficha) {
+       var color ='';
+
+
+      if (estado == 1 ){
+          var botones = "<td class='td-actions'><a href='javascript:;' class='btn btn-small btn-success'  onclick='attended("+Ficha+")'><i class='btn-icon-only fa fa-check'> </i></a><a href='javascript:;' class='btn btn-danger btn-small' onclick='noPresent("+Ficha+")'><i class='btn-icon-only fa fa-times'> </i></a></td>"+
+          "</tr>";
+        }
+      else if(estado == 2){
+        color = 'th-ok';
+          var botones = "<td class='td-actions'><a href='javascript:;' class='btn btn-small btn-success disabled'><i class='btn-icon-only fa fa-check'> </i></a><a href='javascript:;' class='btn btn-danger btn-small disabled'><i class='btn-icon-only fa fa-times'> </i></a></td>"+
+          "</tr>";
+      }
+      else if(estado == 3){
+        color = 'th-nook';
+          var botones = "<td class='td-actions'><a href='javascript:;' class='btn btn-small btn-success disabled'><i class='btn-icon-only fa fa-check'> </i></a><a href='javascript:;' class='btn btn-danger btn-small disabled'><i class='btn-icon-only fa fa-times'> </i></a></td>"+
+          "</tr>";
+      }
+      return color={color:color, botones:botones};
+    }
+
+</script>

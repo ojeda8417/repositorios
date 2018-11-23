@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Sistemas Escolar Children"s Home</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+ <meta name="apple-mobile-web-app-capable" content="yes">
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600" rel="stylesheet">
+<link rel="icon" type="image/ico" href="faviconpi.ico">
+<link href="css/font-awesome.css" rel="stylesheet">
+<link href="css/style.css" rel="stylesheet">
+<link href="css/pages/dashboard.css" rel="stylesheet">
+<!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+<!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+<body>    
+<div id="headite">
+  <div class="row-fluid">
+      <div class="span3" style="text-align: right !important;">
+          <img src="img/logoSEP_hoz.png" class="img-responsive logosite" width="150px !important;">
+      </div>
+      <div id="ite" class="span6">
+            <h1>Sistemas Escolar Children"s Home</h1>
+            <h2>Sistemas Escolar Children"s Home</h2>     
+      </div>
+      <div class="span3" style="text-align: left !important;"> 
+        <img src="img/logodgest.png" class="img-responsive logosite" width="70px !important;">
+        <img src="img/logoite.png"  class="img-responsive logosite" width="50px !important;">
+      </div>
+  </div>
+</div>
+
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner">
+    <div class="container"> 
+        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span> 
+        </a>
+        <a class="brand" href="escolarespi.html">Servicios Escolares</a>
+        <div class="nav-collapse">
+        <ul class="nav pull-right">
+
+      
+          <li class="dropdown">           
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              <i class="icon-user"></i> 
+               <font id="username">Sesión: </font>
+              <b class="caret"></b>
+            </a>
+            
+            <ul class="dropdown-menu">
+              <li><a href="javascript:;" onclick="logout();">Logout</a></li>
+            </ul>           
+          </li>
+        
+      </div><!--/.nav-collapse -->  
+
+      <!--/.nav-collapse --> 
+    </div>
+    <!-- /container --> 
+  </div>
+  <!-- /navbar-inner --> 
+</div>
+<!-- /navbar -->
+<div class="subnavbar">
+  <div class="subnavbar-inner">
+    <div class="container">
+      <ul class="mainnav">
+        <li id="1" class="active"><a onclick="loadhome();"><i class="fa fa-home"></i><span>Inicio</span> </a> </li>
+        <li id="2"><a onclick="loadlista();"><i class="fa fa-list-alt"></i><span>Lista De Espera</span> </a> </li>
+        <li id="3"><a onclick="loadalta();"><i class="fa fa-users"></i><span>Alta de Espera</span> </a></li>
+        <li id="4"><a onclick="loadestadisticas();"><i class="fa fa-bar-chart"></i><span>Estadisticas</span> </a> </li>
+        <li id="5"><a onclick="loadalumnos();"><i class="fa fa-user"></i><span>Alumnos</span> </a> </li>
+        <li id="6"><a onclick="loadguia();"><i class="fa fa-question-circle"></i><span>Guía</span> </a> </li>
+        <li id="7"><a onclick="loadClock();"><i class="fa fa-clock-o"></i><span>Cronometro</span> </a> </li>
+      <li>
+      </li>
+      </ul>
+    </div>
+    <!-- /container --> 
+  </div>
+  <!-- /subnavbar-inner --> 
+</div>
+<!-- /subnavbar -->
+<div class="main">
+  <div class="main-inner">
+    <div class="container" id="content">
+    </div>
+    <!-- /container --> 
+  </div>
+  <!-- /main-inner --> 
+</div>
+<!-- /main -->
+<div class="footer">
+  <div class="footer-inner">
+    <div class="container">
+      <div class="row">
+        <div class="span12" style="text-align: center;"><a href="http://www.itensenada.edu.mx/">Sistemas Escolar Children"s Home</a>. Calle 28 # 7-13 Esquina<br>Riohacha, La Guajira; Colombia. Tels: 3007514357, 78 y 82<br>Jose Ojeda - Algunos derechos reservados &copy; 2015 
+        <p style="font-size: 11px !important; text-align: right !important; color: #2E2E2E !important;"><b>Desarrolladores: </b>Jose Ojeda</p>
+        </div>
+        <!-- /span12 --> 
+      </div>
+      <!-- /row --> 
+
+    <!-- /container --> 
+  </div>
+  <!-- /footer-inner --> 
+</div>
+<!-- /footer --> 
+<!--
+<div class="extra">
+  <div class="extra-inner">
+    <div class="container">
+            
+    </div>
+ /container 
+  </div>
+ /extra-inner  
+</div>
+ /extra -->
+<!-- Le javascript
+================================================== --> 
+<script src="js/jquery-1.7.2.min.js"></script> 
+<script src="js/excanvas.min.js"></script> 
+<script src="js/bootstrap.js"></script>
+<script src="js/mainviews.js"></script> 
+<script src="js/base.js"></script> 
+
+<script>     
+      $(document).ready(function() {
+        if(!localStorage.getItem('user') ){
+            window.location.href = "index.html";
+        }
+
+        $('#username').append(localStorage.getItem('user'));
+      });
+      function logout() {
+          localStorage.removeItem('user');
+          window.location.href = "index.html";
+
+      }
+</script><!-- / -->
+</body>
+</html>

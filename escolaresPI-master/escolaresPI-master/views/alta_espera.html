@@ -1,0 +1,368 @@
+<div class="row">
+<div class="span12">      			
+	<div class="widget ">
+		<div class="widget-header">
+			<i class="icon-user"></i>
+			<h3>ALTA DE ESPERA | Revisión de Documentos</h3>
+		</div> <!-- /widget-header -->
+	<div class="widget-content">
+		<br>
+			<div class="tab-content">
+				<div class="tab-pane active" id="formcontrols">
+		<div class="span6">
+      		<div class="widget">
+      			<div class="widget-content">
+					      		<h1 style="text-align: center !important;">Documentos necesarios</h1><br>
+      		<form id="edit-profile" class="form-horizontal">
+					<fieldset>
+                            <div class="control-group">											
+								<label class="control-label checks">
+									CERTIFICADO DE BACHILLERATO O EQUIVALENTE
+									<a  id='trigger' name="certificado">	
+										<i class="fa fa-question-circle"></i>
+									</a>
+								</label>
+                                <div class="controls">
+                                <label class="inline">
+                                  <input type="checkbox" class="checkbox" name="docs[]" id="docs">
+                                </label>
+                              </div>		
+							</div> 
+
+                            <div class="control-group">											
+								<label class="control-label checks">
+									ACTA DE NACIMIENTO
+									<a  id='trigger' name="acta">	
+										<i class="fa fa-question-circle"></i>
+									</a>
+								</label>
+                                <div class="controls">
+                                <label class="inline">
+                                  <input type="checkbox" class="checkbox" name="docs[]" id="docs">
+                                </label>
+                              </div>		
+							</div> 
+
+							<div class="control-group">											
+								<label class="control-label checks">
+									DICTAMEN DE REVALIDACIÓN O EQUIVALENCIA DE ESTUDIO
+									<a  id='trigger' name="dictamen">	
+										<i class="fa fa-question-circle"></i>
+									</a>
+								</label>
+                                <div class="controls">
+                                <label class="inline">
+                                  <input type="checkbox" class="checkbox" name="docs[]" id='dictamen'>
+                                </label>
+                              </div>		
+							</div> 
+							<div class="control-group">										
+								<label class="control-label checks">
+									CURP
+									<a  id='trigger' name="curp">	
+										<i class="fa fa-question-circle"></i>
+									</a>
+								</label>
+                                <div class="controls">
+                                <label class="inline">
+                                  <input type="checkbox" class="checkbox" name="docs[]" id="docs">
+                                </label>
+                              </div>		
+							</div>
+							<div class="control-group">										
+								<label class="control-label checks">
+									COPIA DE COMPROBANTE DE CUOTA POR CONCEPTO DE INSCRIPCIÓN
+									<a  id='trigger' name="cuota">	
+										<i class="fa fa-question-circle"></i>
+									</a>
+								</label>
+                                <div class="controls">
+                                <label class="inline">
+                                  <input type="checkbox" class="checkbox" name="docs[]" id="docs">
+                                </label>
+                              </div>		
+							</div>
+							<div class="control-group">										
+								<label class="control-label checks">
+									COPIA DE FORMA FM 9 (EN CASO DE SER EXTRANJERO)
+									<a  id='trigger' name="fm9">	
+										<i class="fa fa-question-circle"></i>
+									</a>
+		
+								</label>
+                                <div class="controls">
+                                <label class="inline">
+                                  <input type="checkbox" class="checkbox" name="docs[]" id="fm9">
+                                </label>
+                              </div>		
+							</div>
+							<div class="control-group">										
+								<label class="control-label checks">
+									6 FOTOGRAFÍAS RECIENTES
+									<a  id='trigger' name="fotos">	
+										<i class="fa fa-question-circle"></i>
+									</a>
+								</label>
+                                <div class="controls">
+                                <label class="inline">
+                                  <input type="checkbox" class="checkbox" name="docs[]" id="docs">
+                                </label>
+                              </div>		
+							</div>
+							<div class="control-group">										
+								<label class="control-label checks">
+									CERTIFICADO MÉDICO
+									<a  id='trigger' name="medico">	
+										<i class="fa fa-question-circle"></i>
+									</a>
+								</label>
+                                <div class="controls">
+                                <label class="inline">
+                                  <input type="checkbox" class="checkbox" name="docs[]" id="docs">
+                                </label>
+                              </div>		
+							</div>
+						</fieldset>
+					</form>
+		      		</div> <!-- /widget-content -->
+	      		</div> <!-- /widget -->
+		      		</div> <!-- /span5 -->
+			      	<div class="span5">	      		
+			      		<div id="target-2" class="widget">
+			      			<div class="widget-content center-text">
+					      		<h1>Datos del Alumno</h1><br>
+									<fieldset>
+										<div class="control-group">
+											<label class="control-label" for="ficha">Ficha de inscripción</label>
+											<div class="controls">
+												<input type="text" id="n_ficha" name="n_ficha" disabled>
+											</div> <!-- /controls -->				
+										</div> <!-- /control-group -->
+										<div class="control-group">
+												<label class="control-label" for="nombre">Nombre(s)</label>
+												<div class="controls">
+													<input type="text" id="nombre"  name="nombre" disabled>
+												</div> <!-- /controls -->				
+										</div> <!-- /control-group -->	
+										<div class="control-group">
+												<label class="control-label" for="apellidos">Apellidos</label>
+												<div class="controls">
+													<input type="text" id="apellidos"  name="apellidos" disabled>
+												</div> <!-- /controls -->				
+										</div> <!-- /control-group -->	
+										<div class="control-group">
+												<label class="control-label" for="carrera">Carrera</label>
+												<div class="controls">
+													<select  id="carrera" name="carrera" disabled>
+														<option value="1" >carrera</option>
+														<option value="1" >Sistemas Computacionales</option>
+														<option value="1" >Electronica</option>
+														<option value="1" >Industrian</option>
+														<option value="1" >Administracion</option>
+													</select>
+												</div> 			
+										</div> <!-- /control-group -->	
+										<div class="control-group" id="alerta">
+											<div class="controls">
+												<div class="alert">
+	                                              <button type="button" class="close" onclick="$('#alerta').hide()">
+	                                              	&times;
+	                                              </button>
+	                                              <strong>Cuidado!</strong> Todos los campos son necesarios.
+		                                        </div>
+		                                    </div>
+		                                </div>
+
+	
+									</fieldset>
+									<div class="form-actions" disabled>
+									<button type="submit" class="btn btn-primary" id="btn" disabled="true" onclick="altaAlumno();">
+										Guardar
+									</button> 
+								<p class="help-block">Recuerde otorgar turno y tiempo estimado de espera..</p>
+									</div> <!-- /form-actions -->
+				      		</div> <!-- /widget-content -->
+			      		</div> <!-- /widget -->
+		      		</div> <!-- /span5 -->
+				</div>
+		</div>
+	</div> <!-- /widget -->
+	</div> <!-- /span8 -->
+</div> <!-- /row -->
+<!-- Modal -->
+  <div class="modal fade" id="modalRespuesta" role="dialog">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content center-text">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        	<h4 class="modal-title center-text">Confirmación</h4>
+        </div>
+        <div class="modal-body center-text">
+        <p>
+			El alumno <b class="textInfo" id="nombreAlumno"></b> con la ficha de inscripción <b class="textInfo" id="FichaAlumno"></b> tiene el turno <b class="textInfo" id="turnoAlumno"></b>, y el tiempo estimado para su atencion es de <b class="textInfo" id="EstimadoAlumno"></b> minutos
+        </p>
+      </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+     
+      <div id="certificado" class="pop-up">
+        <h3>Certificado de univerisad</h3>
+        <p class="text-pop-up">
+          En caso de no contar con el certificado se puede dejar algún documento 
+          que compruebe la liberación de materias del nivel basico-superior.
+        </p>
+      </div>
+      <div id="acta" class="pop-up">
+        <h3>Acta de nacimiento</h3>
+        <p class="text-pop-up">
+          Se requiere copia y orginal
+        </p>
+      </div>
+      <div id="dictamen" class="pop-up">
+        <h3>Dictamen de revalidación</h3>
+        <p class="text-pop-up">
+          En caso de provenir de algúna otra universidad.
+        </p>
+      </div>
+      <div id="curp" class="pop-up">
+        <h3>CURP</h3>
+        <p class="text-pop-up">
+          Se requiere copia
+        </p>
+      </div>
+      <div id="cuota" class="pop-up">
+        <h3>Comprobante de cuota por el concepo de inscripción</h3>
+        <p class="text-pop-up">
+          Se requiere copia del comprobante del pago por el concepto de inscripción
+        </p>
+      </div>
+
+      <div id="fm9" class="pop-up">
+        <h3>Forma FM 9</h3>
+        <p class="text-pop-up">
+          Solo en caso de ser extranjero
+        </p>
+      </div>
+      <div id="fotos" class="pop-up">
+        <h3>Fotografías</h3>
+        <p class="text-pop-up">
+          Se requieren como minimo 6 fotografías recientes (6 mese como maximo), ya sea en blanco y negro o a color.
+        </p>
+      </div>
+      <div id="medico" class="pop-up">
+        <h3>Certificado medico</h3>
+        <p class="text-pop-up">
+          Se requiere un certificado medico ya este puede ser de los siguientes lugares.
+        </p>
+      </div>
+      <div id="certificado" class="pop-up">
+        <h3>Certificado de univerisad</h3>
+        <p class="text-pop-up">
+          En caso de no contar con el certificado se puede dejar algún documento 
+          que compruebe la liberación de materias del nivel basico-superior.
+        </p>
+      </div>
+ <script src="js/jquery-1.7.2.min.js"></script> 
+<script src="js/excanvas.min.js"></script> 
+<script src="js/bootstrap.js"></script>
+<script src="js/base.js"></script> 
+      <script>
+	$(".checkbox").change(function() {
+		var checked = [];
+		$("input:checked").each(function(i) {
+		  	if($(this).prop('id')=='docs')
+		  		checked.push($(this).val());
+		});
+		if(checked.length ==6 ){
+			$( "#n_ficha" ).removeProp( "disabled" );
+			$( "#nombre" ).removeProp( "disabled" );
+			$( "#apellidos" ).removeProp( "disabled" );
+			$( "#carrera" ).removeProp( "disabled" );
+			$( "#btn" ).removeProp( "disabled" );
+		}
+		else{
+			$( "#n_ficha" ).prop( "disabled", true );
+			$( "#nombre" ).prop( "disabled", true );
+			$( "#apellidos" ).prop( "disabled", true );
+			$( "#carrera" ).prop( "disabled", true );
+			$( "#btn" ).prop( "disabled", true );
+		}
+	});
+
+	function altaAlumno() {
+		var Nombre = $("#nombre").val() + " "+$("#apellidos").val();
+		var Ficha =  $("#n_ficha").val();
+		var Apelli2 = $("#apellidos").val();
+		var Carrera =  parseInt($( "#carrera option:selected" ).val());
+		var parameters = {Nombre:Nombre, Ficha:Ficha, Carrera:Carrera } ; 
+		if(Nombre !='' && Ficha !='' && Carrera !='' &&  Apelli2 != ''){
+			$.get("php/altaAlumnos.php", parameters )
+			  .done(function( data ) {
+			    	var jsonResponse  = jQuery.parseJSON(data);
+			    	var Nombre = $("#nombre").val() + " "+$("#apellidos").val();
+					var Ficha =  $("#n_ficha").val();
+					$('#nombreAlumno').empty();
+					$('#FichaAlumno').empty();
+					$('#turnoAlumno').empty();
+					$('#EstimadoAlumno').empty();
+					$('#nombreAlumno').text(Nombre);
+					$('#FichaAlumno').text(Ficha);
+					$('#turnoAlumno').text(jsonResponse.turno);
+					$('#EstimadoAlumno').text(jsonResponse.tiempo);
+					$("#modalRespuesta").modal('toggle');
+					$("#n_ficha" ).prop( "disabled", true );
+					$("#nombre" ).prop( "disabled", true );
+					$("#apellidos" ).prop( "disabled", true );
+					$("#carrera" ).prop( "disabled", true );
+					$("#btn" ).prop( "disabled", true );
+					$("#nombre").val("");
+					$("#apellidos").val("");
+					$("#n_ficha").val("");
+					$("#carrera").val("");
+					$("input:checked").each(function() {
+					  $(this).prop('checked', false); // Unchecks it
+					});
+			  });
+			  	$('#alerta').hide();
+		}
+		else{
+			$('#alerta').show();
+		}
+	}
+	$(document).ready(function (){
+		$('#alerta').hide();
+		$.get("php/getCarrera.php", function( data ) {
+		  	var jsonResponse  = jQuery.parseJSON(data);
+		  	var carreras = "<option value='0' >Seleccione una carrera</option>";
+		  	 var selectCarreras = $("#carrera");
+                 selectCarreras.empty();
+		  	$.each(jsonResponse, function(i,item){
+		  			carreras += "<option value='"+item.Id+"' >"+item.Nombre+"</option>";
+		  		});
+		  	    selectCarreras.append(carreras);
+		});
+	});
+
+	 $(function() {
+        var moveLeft = 20;
+        var moveDown = 10;
+        
+        $('a#trigger').hover(function(e) {
+          $('div#'+$(this).prop('name')).show().css('top', e.pageY + moveDown).css('left', e.pageX + moveLeft).appendTo('body');
+        	}, 
+        	function() {
+          		$('div#'+$(this).prop('name')).hide();
+        	});
+        
+        $('a#trigger').mousemove(function(e) {
+          $("div#"+$(this).prop('name')).css('top', e.pageY + moveDown).css('left', e.pageX + moveLeft);
+        });
+        
+      });
+</script>

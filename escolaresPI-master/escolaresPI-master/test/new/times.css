@@ -1,0 +1,151 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    /* display: none; <- Crashes Chrome on hover */
+    -webkit-appearance: none;
+    margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+@font-face {
+    font-family: 'digital_dreamregular';
+    src: url('digitalfont/digitaldream-webfont.eot');
+    src: url('digitalfont/digitaldream-webfont.eot?#iefix') format('embedded-opentype'),
+         url('digitalfont/digitaldream-webfont.woff2') format('woff2'),
+         url('digitalfont/digitaldream-webfont.woff') format('woff'),
+         url('digitalfont/digitaldream-webfont.ttf') format('truetype'),
+         url('digitalfont/digitaldream-webfont.svg#digital_dreamregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+input{
+	margin-left:8%; 
+	width: 87% !important;
+	height: 75px !important;
+}
+input:focus { 
+    background-color: #fff;
+}
+/*
+body {
+		background-color: rgb(215, 233, 255);
+		background-image: url("clock1.jpg");
+		background-repeat: no-repeat;
+		background-position: center center;
+		background-attachment: fixed;
+		-webkit-background-size: cover;
+		-moz-background-size: cover;
+		-o-background-size: cover;
+		background-size: cover;
+		padding: 0% 10% 0% 10%;
+}
+*/
+.titulo-pricipal {
+		color: #0B614B;
+		font-size: 4em;
+		font-weight: bold;
+		font-family: Sans-Serif;
+		background-color: rgb(255, 255, 255);
+		opacity: 0.85;
+		border-radius: 10px;
+		padding: 5px 0px;
+}
+
+.secciones {
+		margin: 10px 0px 10px 0px;
+		margin-top: 25px;
+		padding: 30px 125px 0px 125px;
+}
+
+.seccion {
+		background-color: transparent;
+		opacity: 1;
+		margin: 0px 0px 0px 0px;
+		padding: 0px 0px 0px 0px;
+}
+
+.config {
+		color: #f1f1f1;
+		font-size: 20px;
+		font-weight: bold;
+		background-color: rgb(96, 154, 251);
+		display: block;
+		padding: 0px 0px 0px 0px;
+		border-radius: 10px 10px 0px 0px;
+}
+
+.number {
+		font-size: 30px;
+		font-weight: bold;
+		display: block;
+		padding: 0px 0px 0px 0px;
+		margin: 0px;
+}
+
+.izquierda {
+		background: #00c1a4;
+		margin: 0px 15px 0px 0px;
+}
+
+.derecha {
+		background: #00c1a4;
+		margin: 0px 0px 0px 35px;
+}
+
+.options {
+		font-size: 50px;
+		font-weight: bold;
+		background-color: rgb(255, 255, 255);
+		padding: 10px 0px 10px 0px;
+		border-radius: 0px 0px 10px 10px;
+}
+
+.tiempo-ext {
+		background-color: #1C1C1C;
+		border-radius: 1%;
+		width: 700px;
+		height: 350px;
+		margin: auto;
+		margin-top: 70px;
+		padding: 8px 8px 8px 8px;
+		opacity: 0.95;
+}
+
+.tiempo-int {
+		background-color:#000;
+		border-radius: 1%;
+		width: 685px;
+		height: 335px;
+		padding: 42px;	
+	}
+
+.tiempo {
+		background: #F2F2F2;
+		/*background: linear-gradient(to top, rgb(253, 150, 132) 0%, rgb(253, 150, 132) 0%, rgb(152, 255, 147) 0%, rgb(152, 255, 147) 100%);*/
+		border-radius: 2%;
+		width: 600px;
+		height: 250px;
+
+}
+
+#leyenda {
+		color: #1C1C1C;
+		font-size: 3em;
+}
+
+#time{
+		color: #DF0101;
+		font-size: 8em;
+		font-family: 'digital_dreamregular';
+}
+
+.flechas {
+		font-size: 18px;
+		background-color: rgb(211, 235, 254);
+}
+
+.vertical-center {
+		position: relative;
+		top: 50%;
+		transform: translateY(-50%);
+}

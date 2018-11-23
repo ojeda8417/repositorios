@@ -1,0 +1,110 @@
+/* CSS Document */
+
+* 	{ margin: 0; padding: 0; }
+body	{ font: bold 14px Helvetica, Sans-Serif;
+    background-image:  url("../img/fondo_user.png");
+    background-repeat: no-repeat;
+    background-size: 100em;
+    z-index: 2;
+}
+#login  { top:50px; left:0px; position:relative;}
+#page-wrap { width: 800px; margin: 25px auto;top:0px; }
+a       { text-decoration: none; }
+ul	{ list-style: none; }
+p       { margin: 15px 0; }
+
+
+.img{border:0px;}
+.flt{float:left;position:relative;top:0; }
+.menubg{position:relative;top:55px;clear:left; background-color:#6FA9C7; width:200px;}
+.menu{float:left; clear:left; font:bold 11px Helvetica, Arial, sans-serif;}
+.menu li {margin:0px 0px 0px 0px; list-style:none;}
+.menu a, .menu a:visited {
+    width:186px;
+    height:22px;
+    margin:0px 0px 2px 2px;
+    position:relative;
+    display:block;
+    color:#cbe7f5;
+    text-decoration:none;
+    background: url("../img/menubg2.jpg") no-repeat;
+    padding:4px 0 0 8px;
+}
+*html .menu a, .menu a:visited {
+    width:186px;
+    height:22px;
+    margin:0px 0px 2px 2px;
+    position:relative;
+    display:block;
+    color:#cbe7f5;
+    text-decoration:none;
+    background: url("../img/menubg2.jpg") no-repeat;
+    padding:4px 0 0 8px;
+}
+.menu a:hover, .menu a:active,
+.menu li.current_page_item a, .menu li.current_page_item a:visited  {
+    background: url("../img/menubg1.jpg") no-repeat;
+    text-decoration:none;
+}
+.bot{clear:left;}
+
+
+
+body{ font: bold 14px Helvetica, Sans-Serif;
+          background-image:  url("../img/fondo_bod.png");
+          background-repeat: no-repeat;
+          background-size: 100em;
+          z-index: 1;
+ }
+
+
+.tabla_bod {
+     position: relative;
+     top:80px;
+     left: 100px;
+     z-index: 2;
+     background-color: #b3c0c8 ;
+}
+.tabla_det{
+    position: relative;
+    top:110px;
+    left: 100px;
+    font-family: "Trebuchet MS", "Arial", "Helvetica", "Verdana", "sans-serif";
+    font-size: 17px;
+    z-index: 3;
+    background-color: #b4ccce;
+}
+#add_btn{
+    position: relative;
+    top:120px;
+    left: 100px;
+}
+
+#encabezado{
+    background-color: #ffffff;
+    font-size: 16px;
+    text-align: center;
+    border-radius:10px 10px 0px 0px;
+}
+
+.tabla_req {
+    position: relative;
+    top:60px;
+    left: 90px;
+    z-index: 2;
+
+}
+
+.tabla_bod_ing{
+    position: relative;
+    top:45px;
+    left:60px;
+}
+.tabla_det_ing{
+    position: relative;
+    top:100px;
+    left:60px;
+    width: 70%;
+
+
+}

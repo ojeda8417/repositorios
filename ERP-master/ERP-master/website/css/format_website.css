@@ -1,0 +1,88 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/* Codigo Mensajes Validacion */
+
+div 
+{
+   margin-top: 185px;
+	
+}
+div label.campo{
+  width: 10px;
+  float: left;
+}
+
+fieldset{
+    width: 50px;
+}
+label.error{
+    color: #FFF;
+	font:Verdana, Geneva, sans-serif;
+    padding-left: 850px;
+}
+input.error{
+    background-color: #FF9;
+}
+
+/* ========== Codigo General =========   */
+
+ 
+ .back_index
+ {
+	position:relative;
+	background-image:url(../img/login.png);
+	background-repeat:no-repeat;
+	background-position:center;
+	
+ }
+
+
+.txt_usr
+{
+	
+	position:relative;
+	display:block;
+	top:85px;
+	margin-left:auto;
+	margin-right:auto;
+	/*left:700px;*/
+}
+
+.txt_pass
+{
+	position:relative;
+	display:block;
+	top:90px;
+	margin-left:auto;
+	margin-right:auto;
+	/*left:700px;*/
+}
+
+.submit {
+	position:relative;
+	top:95px;
+	left:460px;
+	width: 85px;
+	height: 30px;
+	line-height: 30px;
+	background: url(../img/btns.gif) top center no-repeat;
+	border: 0;
+	font-family: "Titillium800", "Trebuchet MS", Arial, sans-serif;
+	font-size: 14px;
+	font-weight: normal;
+	text-transform: uppercase;
+	color: #fff;
+	text-shadow: 1px 1px 0 #0a5482;
+	cursor: pointer;
+	margin-right: 10px;
+	vertical-align: middle;
+	}
+	
+.submit:hover
+{
+	background: url(../img/btns_.gif) top center no-repeat;
+	text-shadow: 1px 1px 0 #b55f10;
+}
+
+

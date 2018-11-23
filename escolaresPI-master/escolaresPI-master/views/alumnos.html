@@ -1,0 +1,156 @@
+	      <div class="row">
+	      	<div class="span12">      			
+	      		<div class="widget ">
+	      			<div class="widget-header">
+	      				<i class="icon-user"></i>
+	      				<h3>BUSQUEDA DE ALUMNOS</h3>
+	  				</div> <!-- /widget-header -->
+					<div class="widget-content">
+		<div class="span6">
+      	<div id="target-2" class="widget">
+			      			<div class="widget-content center-text">
+					      		<h1>Datos del Alumno</h1><br>
+									<fieldset>
+										<div class="control-group">
+											<label class="control-label" for="ficha">Ficha de inscripción</label>
+											<div class="controls">
+												<input type="text" id="n_ficha" name="n_ficha">
+											</div> <!-- /controls -->				
+										</div> <!-- /control-group -->
+										<div class="control-group" id="alerta">
+											<div class="controls">
+												<div class="alert">
+	                                              <button type="button" class="close" onclick="$('#alerta').hide()">
+	                                              	&times;
+	                                              </button>
+	                                              <strong>Cuidado!</strong> Primero introduzca una ficha de inscripción.
+		                                        </div>
+		                                    </div>
+		                                </div>
+		                                <div class="control-group" id="alertaNop">
+											<div class="controls">
+												<div class="alert">
+	                                              <button type="button" class="close" onclick="$('#alerta').hide()">
+	                                              	&times;
+	                                              </button>
+	                                              <strong>Lo sentimos!</strong> No se ha encontrado nada que conincida.
+		                                        </div>
+		                                    </div>
+		                                </div>
+									</fieldset>
+									<div class="form-actions" disabled>
+									<button type="submit" class="btn btn-primary" id="btn" onclick="searchAlumno();">
+										Buscar
+									</button> 
+									</div> <!-- /form-actions -->
+				      		</div> <!-- /widget-content -->
+			      		</div> <!-- /widget -->	
+		</div> <!-- /span5 -->
+			      	<div class="span5">	      		
+			      		<div id="target-2" class="widget">
+			      			<div class="widget-content center-text">
+					      		<h1>Datos del Alumno</h1><br>
+									<fieldset>
+										 <table class="table table-bordered table-hover tablesorter">
+										        <tbody>
+												   <tr>
+										                <th>Nombre</th>
+										                <td id="nombreA"></td>
+										            </tr>
+											        
+										            <tr>
+										                <th>Carrera</th>
+										                <td id="carreraA"></td>
+										            </tr>
+											        
+										            <tr>
+										                <th>Fecha de atención</th>
+										                <td id="fechaA"></td>
+										            </tr>
+										            <tr>
+										                <th>Ficha de inscripción</th>
+										                <td id="fichaA"> </td>
+										            </tr>
+										            <tr>
+										                <th>Turno</th>
+										                <td id="turnoA"> </td>
+										            </tr>
+										            <tr>
+										                <th>Estado</th>
+										                <td id="estadoA"> </td>
+										            </tr>
+										        </tbody>
+										    </table>
+									</fieldset>
+									<div class="form-actions" disabled>
+									<button type="submit" class="btn btn-primary" id="btn" onclick="limpiar();">
+										Limpiar
+									</button> 
+									</div> <!-- /form-actions -->
+				      		</div> <!-- /widget-content -->
+			      		</div> <!-- /widget -->
+		      		</div> <!-- /span5 -->
+						
+
+            
+					</div> <!-- /widget-content -->
+				</div> <!-- /widget -->
+		    </div> <!-- /span8 -->
+	      </div> <!-- /row -->
+<script>
+$(document).ready(function (){
+		$('#alerta').hide();
+						  		$('#alertaNop').hide();
+
+});
+		function searchAlumno() {
+			var parameter = {Ficha:$('#n_ficha').val()};
+			if($('#n_ficha').val() != ''){
+				$.get("php/searchAlumno.php", parameter ,function( data ) {
+				  	var jsonResponse  = jQuery.parseJSON(data);
+				  	if(jsonResponse.estado == 0){
+				  		$('#nombreA').text(jsonResponse.Alumno.Nombre);
+						$('#carreraA').text(jsonResponse.Alumno.Carrera);
+						$('#fechaA').text(jsonResponse.Alumno.Fecha);
+						$('#fichaA').text(jsonResponse.Alumno.Ficha);
+						$('#turnoA').text(jsonResponse.Alumno.Turno);
+						$('#estadoA').text(getEstado(jsonResponse.Alumno.Estado));
+						$('#alertaNop').hide();
+				  	}
+				  	else{
+				  		$('#alertaNop').show();
+				  		limpiar();
+				  	}
+				});
+				$('#alerta').hide();
+			}
+			else{
+				$('#alerta').show();
+				$('#alertaNop').hide();
+
+			}
+		}
+	function limpiar() {
+		$('#nombreA').text('');
+		$('#carreraA').text('');
+		$('#fechaA').text('');
+		$('#fichaA').text('');
+		$('#turnoA').text('');
+		$('#estadoA').text('');
+		$('#n_ficha').val('');
+	}
+	function getEstado(estado) {
+        switch(parseInt(estado)) {
+          case 1:
+              return 'En espera'
+              break;
+          case 2:
+              return 'Atendido'
+              break;
+          case 3:
+              return 'No se presentó'
+              break;
+        }
+    }
+
+</script>

@@ -1,0 +1,59 @@
+.action-bubble {
+	width: 40px; 
+	position: relative;
+	left: 70%;
+	background: white;
+	border: 4px solid #428bca;
+	-moz-border-radius: 10px; 
+	-webkit-border-radius: 10px; 
+	border-radius: 10px;
+	z-index: 99;
+}
+.action-bubble:before {
+   	content: "";
+	position: absolute;
+	width: 0;
+	height: 0;
+	border-top: 9px solid transparent;
+	border-right: 13px solid #428bca;
+	border-bottom: 9px solid transparent;
+	margin: 4px 0 0 -17px;
+}
+.action-bubble ul{
+	padding: 0;
+	list-style-type: none;
+}
+.action-bubble hr{
+	margin: 0;
+}
+.btn-action{
+	position: relative;
+	left: -1px;
+	top: -1px;
+	-moz-border-radius: 0; 
+	-webkit-border-radius: 0;
+	border-radius: 0;
+}
+.action_container{
+   	width: 32px; 
+	-moz-border-radius: 7px; 
+	-webkit-border-radius: 7px;
+	border-radius: 7px;
+	overflow: hidden;
+}
+.actions{
+	/*padding-left: 75%;*/
+	position: relative;
+	display: none;
+	width: 100%;
+	height: 0px;
+	bottom: 30px;
+}
+
+table tr.even.row_selected td {
+        background-color: #B0BED9;
+}
+
+table tr.odd.row_selected td {
+        background-color: #9FAFD1;
+}

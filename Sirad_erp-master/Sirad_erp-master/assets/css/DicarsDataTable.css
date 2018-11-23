@@ -1,0 +1,49 @@
+.dataTables_length {
+float: left; }
+.dataTables_length select {
+  width: 80px;
+  height: 30px;
+  margin-bottom: 0; }
+.dataTables_filter {
+float: right; }
+.dataTables_filter input {
+  width: 160px;
+  margin-bottom: 0;
+  outline: none; }
+.dataTables_info {
+float: left;
+margin-bottom: 5px; }
+.dataTables_paginate {
+margin: 5px 0;
+float: right; }
+.dataTables_paginate .first,.dataTables_paginate .previous,.dataTables_paginate .next, .dt_example .dataTables_paginate .last {
+  display: none; }
+.dataTables_paginate .paginate_button,.dataTables_paginate .paginate_active {
+  background: #f2f2f2;
+  margin: 1px;
+  padding: 5px 10px; }
+ .dataTables_paginate .paginate_button:hover,.dataTables_paginate .paginate_active:hover {
+    background: #e6e6e6;
+    cursor: pointer; }
+.dataTables_paginate .paginate_active {
+  background: #40acd6;
+  color: white; }
+.dataTable .sorting {
+cursor: pointer;
+background: url(../img/sorting.png) no-repeat center right; }
+.dataTable .sorting_asc {
+cursor: pointer;
+background: url(../img/sorting_asc.png) no-repeat center right; }
+.dataTable .sorting_desc {
+cursor: pointer;
+background: url(../img/sorting_desc.png) no-repeat center right; }
+
+
+
+table tr.even.row_selected td {
+	background-color: #B0BED9;
+}
+
+table tr.odd.row_selected td {
+	background-color: #9FAFD1;
+}

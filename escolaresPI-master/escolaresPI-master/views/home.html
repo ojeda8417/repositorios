@@ -1,0 +1,38 @@
+<div class="row">
+   	<div class="span9">
+      	<div> 
+      	<h2 style="text-align: center !important;"><strong>EscolaresPi</strong>: Sistema para Alumnos de Nuevo Ingreso</h2>
+      	<p style="text-align: center;"> El Objetivo principal de nuestro proyecto es verificar los documentos de los alumnos de nuevo ingreso y mantener un control de los mismos.</p>
+     		<img src="img/Diagrama-Escolares.png" width="90%"> 
+     	<!--	, brindando así una mejor distribución en los tiempos tanto en la verificación de documentos como en la atención de inscripción<p><b>(Esquema Representativo del flujo de turnos)</b></p> -->
+      	</div>
+	</div>
+   	<div class="span3">
+		<div class="widget">
+	       <div class="widget-header">
+	            <i class="icon-bar-chart"></i>
+	              <h3>Alumnos Registrados hoy</h3>
+	        </div>
+	        <!-- /widget-header -->
+	        <div class="widget-content">
+	        	<div class="control-group">											
+					<label class="control-label" for="totalAlumno">
+					<h3>Total:</h3></label>
+					<div class="controls">
+					<input type="text" class="span2" id="totalAlumno" value="#" 
+					 style="height: 40px;  width: 80px !important; font-size: 2em; font-weight: bold;" disabled="true">
+					</div> <!-- /controls -->				
+				</div> <!-- /control-group -->
+	        </div>
+	        <!-- /widget-content -->
+	    </div>
+	</div>
+</div>
+<script>
+	$(document).ready(function (){
+		$.get("php/totalAlumnos.php", function( data ) {
+		  	var jsonResponse  = jQuery.parseJSON(data);
+		  	$('#totalAlumno').val('# '+jsonResponse.totalAlumnos);
+		});
+	});
+</script>

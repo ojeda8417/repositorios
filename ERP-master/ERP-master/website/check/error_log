@@ -1,0 +1,38 @@
+[09-Nov-2013 21:42:29 America/New_York] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, boolean given in /home/sintaxis/public_html/app/website/check/check.php on line 12
+[09-Nov-2013 21:42:29 America/New_York] PHP Warning:  mysql_free_result() expects parameter 1 to be resource, boolean given in /home/sintaxis/public_html/app/website/check/check.php on line 14
+[10-Nov-2013 14:33:59 America/New_York] PHP Warning:  include(../lib/conexion.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/sintaxis/public_html/app/website/check/check.php on line 3
+[10-Nov-2013 14:34:00 America/New_York] PHP Warning:  include(../lib/conexion.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/sintaxis/public_html/app/website/check/check.php on line 3
+[10-Nov-2013 14:34:00 America/New_York] PHP Warning:  include() [<a href='function.include'>function.include</a>]: Failed opening '../lib/conexion.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/sintaxis/public_html/app/website/check/check.php on line 3
+[10-Nov-2013 14:34:00 America/New_York] PHP Fatal error:  Call to undefined function Conectarse() in /home/sintaxis/public_html/app/website/check/check.php on line 4
+[10-Nov-2013 14:34:39 America/New_York] PHP Warning:  include(../lib/conexion.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/sintaxis/public_html/app/website/check/check.php on line 3
+[10-Nov-2013 14:34:39 America/New_York] PHP Warning:  include(../lib/conexion.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/sintaxis/public_html/app/website/check/check.php on line 3
+[10-Nov-2013 14:34:39 America/New_York] PHP Warning:  include() [<a href='function.include'>function.include</a>]: Failed opening '../lib/conexion.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/sintaxis/public_html/app/website/check/check.php on line 3
+[10-Nov-2013 14:34:39 America/New_York] PHP Fatal error:  Call to undefined function Conectarse() in /home/sintaxis/public_html/app/website/check/check.php on line 4
+[10-Nov-2013 14:36:31 America/New_York] PHP Warning:  include(../lib/conexion.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/sintaxis/public_html/app/website/check/check.php on line 3
+[10-Nov-2013 14:36:31 America/New_York] PHP Warning:  include(../lib/conexion.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/sintaxis/public_html/app/website/check/check.php on line 3
+[10-Nov-2013 14:36:31 America/New_York] PHP Warning:  include() [<a href='function.include'>function.include</a>]: Failed opening '../lib/conexion.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/sintaxis/public_html/app/website/check/check.php on line 3
+[10-Nov-2013 14:36:31 America/New_York] PHP Fatal error:  Call to undefined function Conectarse() in /home/sintaxis/public_html/app/website/check/check.php on line 4
+[10-Nov-2013 14:36:47 America/New_York] PHP Warning:  include(../lib/conexion.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/sintaxis/public_html/app/website/check/check.php on line 3
+[10-Nov-2013 14:36:47 America/New_York] PHP Warning:  include(../lib/conexion.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/sintaxis/public_html/app/website/check/check.php on line 3
+[10-Nov-2013 14:36:47 America/New_York] PHP Warning:  include() [<a href='function.include'>function.include</a>]: Failed opening '../lib/conexion.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/sintaxis/public_html/app/website/check/check.php on line 3
+[10-Nov-2013 14:36:47 America/New_York] PHP Fatal error:  Call to undefined function Conectarse() in /home/sintaxis/public_html/app/website/check/check.php on line 4
+[10-Nov-2013 15:39:34 America/New_York] PHP Warning:  include(../lib/conexion.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/sintaxis/public_html/app/website/check/check.php on line 3
+[10-Nov-2013 15:39:34 America/New_York] PHP Warning:  include(../lib/conexion.php) [<a href='function.include'>function.include</a>]: failed to open stream: No such file or directory in /home/sintaxis/public_html/app/website/check/check.php on line 3
+[10-Nov-2013 15:39:34 America/New_York] PHP Warning:  include() [<a href='function.include'>function.include</a>]: Failed opening '../lib/conexion.php' for inclusion (include_path='.:/usr/lib/php:/usr/local/lib/php') in /home/sintaxis/public_html/app/website/check/check.php on line 3
+[10-Nov-2013 15:39:34 America/New_York] PHP Fatal error:  Call to undefined function Conectarse() in /home/sintaxis/public_html/app/website/check/check.php on line 4
+[10-Nov-2013 15:55:01 America/New_York] PHP Warning:  mysql_num_rows() expects parameter 1 to be resource, boolean given in /home/sintaxis/public_html/app/website/check/check.php on line 12
+[10-Nov-2013 15:55:01 America/New_York] PHP Warning:  mysql_free_result() expects parameter 1 to be resource, boolean given in /home/sintaxis/public_html/app/website/check/check.php on line 14
+[13-Nov-2013 19:50:38 America/New_York] PHP Warning:  Module 'Phar' already loaded in Unknown on line 0
+[20-Nov-2013 20:26:56 America/New_York] PHP Warning:  Module 'Phar' already loaded in Unknown on line 0
+[24-Nov-2013 22:33:17 America/New_York] PHP Warning:  Module 'Phar' already loaded in Unknown on line 0
+[24-Nov-2013 22:33:33 America/New_York] PHP Warning:  Module 'Phar' already loaded in Unknown on line 0
+[24-Nov-2013 22:33:42 America/New_York] PHP Warning:  Module 'Phar' already loaded in Unknown on line 0
+[24-Nov-2013 22:33:46 America/New_York] PHP Warning:  Module 'Phar' already loaded in Unknown on line 0
+[24-Nov-2013 22:33:58 America/New_York] PHP Warning:  Module 'Phar' already loaded in Unknown on line 0
+[24-Nov-2013 22:34:04 America/New_York] PHP Warning:  Module 'Phar' already loaded in Unknown on line 0
+[24-Nov-2013 22:34:11 America/New_York] PHP Warning:  Module 'Phar' already loaded in Unknown on line 0
+[24-Nov-2013 22:58:09 America/New_York] PHP Warning:  Module 'Phar' already loaded in Unknown on line 0
+[25-Nov-2013 20:56:29 America/New_York] PHP Warning:  Module 'Phar' already loaded in Unknown on line 0
+[25-Nov-2013 21:24:57 America/New_York] PHP Warning:  Module 'Phar' already loaded in Unknown on line 0
+[25-Nov-2013 21:25:00 America/New_York] PHP Warning:  Module 'Phar' already loaded in Unknown on line 0
+[25-Nov-2013 21:25:31 America/New_York] PHP Warning:  Module 'Phar' already loaded in Unknown on line 0

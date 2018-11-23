@@ -1,0 +1,60 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Bienvenido Sistema V-0.0.9 Alpha</title>
+<link href="css/formato.css" rel="stylesheet" type="text/css" />
+<script src="lib/jquery-1.5.2.js" type="text/javascript"></script>
+<script src="lib/jquery.validate.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+$(document).ready(function() {
+$("#log-in").validate({
+     rules: {
+	         user:{
+			         required: true,
+					 minlength:8
+		        },
+          
+		     pass:{
+			 		 required: true,
+					 minlength:6
+			    }
+			 },
+	messages: {
+		    user: {
+				  required: "*",
+				  minlength:"minimo 8 caracteres"		  
+					},
+			pass: {
+				  required: "*",
+				   minlength:"minimo 6 caracteres"
+			      }
+		
+		} 
+    
+});
+});
+</script>
+</head>
+<div class="container">
+    <div class="login">
+        <h1>Iniciar Sesión</h1>
+        <form id="log-in" name="log-in" method="post"  action="check/check.php">
+            <p><input type="text" name="user" value="" placeholder="Ingrese Usuario"></p>
+            <p><input type="password" name="pass" value="" placeholder="Ingrese Password"></p>
+            <p class="remember_me">
+                <label>
+                 
+                </label>
+            </p>
+            <p class="submit"><input type="submit" name="commit" value="Entrar"></p>
+        </form>
+    </div>
+ 
+    <div class="login-help">
+        &copy; Sintaxis Binaria 2014. Todos los derechos reservados.
+    </div>
+</div>
+</body>
+</html>

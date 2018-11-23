@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Sistemas Escolar Children"s Home - Proceso de Inscripcion</title>
+	  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes"> 
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css" />
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400italic,600italic,400,600" rel="stylesheet">
+	<link rel="icon" type="image/ico" href="faviconpi.ico">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+    <link href="css/pages/signin.css" rel="stylesheet">
+    <link href="css/pages/dashboard.css" rel="stylesheet">
+</head>
+<body id="loginbkg"> <br>
+<div class="container-fluid">
+		<div class="account-container">
+			<div class="content clearfix">
+				<center><img src="img/logo-escolarespi.png" width="65%" ></center>
+					<h1 style="text-align: center;">Sistemas Escolar Children"s Home</h1>		
+					<div class="login-fields">				
+						<div class="field">
+							<label for="username">Usuario:</label>
+							<input type="text" id="username" name="username" value="" placeholder="Usuario" class="login username-field" />
+						</div> <!-- /field -->	
+						<div class="field">
+							<label for="password">Contraseña:</label>
+							<input type="password" id="password" name="password" value="" placeholder="Contraseña" class="login password-field"/>
+						</div> <!-- /password -->
+					</div> <!-- /login-fields -->
+					<div class="login-actions" style="text-align: center !important; margin-top: 10px;">
+						<button class="btn btn-success btn-large" onclick="login();">Login</button>
+					</div> <!-- .actions -->
+			</div> <!-- /content -->
+			<div class="control-group" id="alerta">
+				<div class="controls">
+					<div class="alert">
+			          <button type="button" class="close" onclick="$('#alerta').hide()">
+			          	&times;
+			          </button>
+			          <strong>Ooops!</strong> Verifique su usuario y password.
+			        </div>
+			    </div>
+			</div>
+		</div> <!-- /account-container -->
+
+</div>
+
+<script src="js/jquery-1.7.2.min.js"></script>
+<script src="js/bootstrap.js"></script>
+<script src="js/base.js"></script>
+<script src="js/jquery.backstretch.min.js"></script>
+
+
+<script type="text/javascript">
+  function login () {
+  	$.get("php/userLogin.php",{user:$('#username').val(), pass:$('#password').val()} ,function( data ) {
+		  	var jsonResponse  = jQuery.parseJSON(data);
+		  	if(jsonResponse.estado == 1) {
+			    localStorage.setItem("user", $('#username').val());
+			    window.location.href = "escolarespi.html";
+		      }
+		     else{
+		       		$('#alerta').show();
+		      }
+		});
+
+    }  
+
+    $(document).ready(function (){
+		$('#alerta').hide();
+		if(localStorage.getItem('user') ){
+			    window.location.href = "escolarespi.html";
+        }
+});
+        jQuery("#loginbkg").backstretch([
+                "img/ite-0.jpg"
+              , "img/ite-1.jpg"
+              , "img/ite-2.jpg"
+            ], {duration: 4000, fade: 1000});
+
+        jQuery("#bodybg").backstretch("img/.jpg");
+</script>
+</body>
+</html>
